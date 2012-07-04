@@ -31,7 +31,7 @@ except ImportError:
 
 def wait(str=None, prompt='Press return to show results...\n'):
     if str is not None:
-        print str
+        print (str)
     raw_input(prompt)
 
 
