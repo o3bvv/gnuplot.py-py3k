@@ -62,7 +62,7 @@ def main():
             f.write('%s %s %s\n' % (x, math.cos(x), math.sin(x)))
         f.close()
 
-        print '############### test Func ###################################'
+        print ('############### test Func ###################################')
         wait('Plot a gnuplot-generated function')
         g.plot(Gnuplot.Func('sin(x)'))
 
@@ -81,7 +81,7 @@ def main():
         wait('axes=x2y2')
         g.plot(Gnuplot.Func('sin(x)', axes='x2y2', title='Sine of x'))
 
-        print 'Change Func attributes after construction:'
+        print ('Change Func attributes after construction:')
         f = Gnuplot.Func('sin(x)')
         wait('Original')
         g.plot(f)
@@ -98,7 +98,7 @@ def main():
         f.set_option(axes='x2y2')
         g.plot(f)
 
-        print '############### test File ###################################'
+        print ('############### test File ###################################')
         wait('Generate a File from a filename')
         g.plot(Gnuplot.File(filename1))
 
@@ -125,7 +125,7 @@ def main():
         wait('title="title"')
         g.plot(Gnuplot.File(filename1, title='title'))
 
-        print 'Change File attributes after construction:'
+        print ('Change File attributes after construction:')
         f = Gnuplot.File(filename1)
         wait('Original')
         g.plot(f)
@@ -139,7 +139,7 @@ def main():
         f.set_option(title=None)
         g.plot(f)
 
-        print '############### test Data ###################################'
+        print ('############### test Data ###################################')
         x = numpy.arange(100)/5. - 10.
         y1 = numpy.cos(x)
         y2 = numpy.sin(x)
@@ -185,7 +185,7 @@ def main():
         wait('title="Cosine of x"')
         g.plot(Gnuplot.Data(d, title='Cosine of x'))
 
-        print '############### test compute_Data ###########################'
+        print ('############### test compute_Data ###########################')
         x = numpy.arange(100)/5. - 10.
 
         wait('Plot Data, computed by Gnuplot.py')
@@ -202,8 +202,8 @@ def main():
         wait('with_="lp 4 4"')
         g.plot(Gnuplot.funcutils.compute_Data(x, math.cos, with_='lp 4 4'))
 
-        print '############### test hardcopy ###############################'
-        print '******** Generating postscript file "gp_test.ps" ********'
+        print ('############### test hardcopy ###############################')
+        print ('******** Generating postscript file "gp_test.ps" ********')
         wait()
         g.plot(Gnuplot.Func('cos(0.5*x*x)', with_='linespoints 2 2',
                        title='cos(0.5*x^2)'))
@@ -243,7 +243,7 @@ def main():
         wait('Testing hardcopy options: fontsize=20')
         g.hardcopy('gp_test.ps', fontsize=20)
 
-        print '******** Generating svg file "gp_test.svg" ********'
+        print ('******** Generating svg file "gp_test.svg" ********')
         wait()
         g.plot(Gnuplot.Func('cos(0.5*x*x)', with_='linespoints 2 2',
                        title='cos(0.5*x^2)'))
@@ -253,11 +253,11 @@ def main():
         g.hardcopy('gp_test.ps', terminal='svg', enhanced='1')
         
 
-        print '############### test shortcuts ##############################'
+        print ('############### test shortcuts ##############################')
         wait('plot Func and Data using shortcuts')
         g.plot('sin(x)', d)
 
-        print '############### test splot ##################################'
+        print ('############### test splot ##################################')
         wait('a 3-d curve')
         g.splot(Gnuplot.Data(d, with_='linesp', inline=0))
         wait('Same thing, saved to a file')
@@ -266,7 +266,7 @@ def main():
         wait('Same thing, inline data')
         g.splot(Gnuplot.Data(d, with_='linesp', inline=1))
 
-        print '############### test GridData and compute_GridData ##########'
+        print ('############### test GridData and compute_GridData ##########')
         # set up x and y values at which the function will be tabulated:
         x = numpy.arange(35)/2.0
         y = numpy.arange(30)/10.0 - 1.5
