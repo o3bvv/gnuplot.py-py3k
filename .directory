@@ -1,5 +1,8 @@
 [Dolphin]
-Timestamp=2012,7,4,18,26,26
+AdditionalInfo=Details_Size,Details_Date,Details_Type,CustomizedDetails
+Sorting=6
+Timestamp=2012,7,4,22,53,33
+ViewMode=1
 
 [Settings]
 HiddenFilesShown=true

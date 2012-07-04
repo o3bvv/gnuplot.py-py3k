@@ -439,7 +439,7 @@ class Gnuplot:
             if maxrange is None:
                 maxrange = '*'
             self('set %s [%s:%s]' % (option, minrange, maxrange,))
-
+lol
     def set(self, **keyw):
         """Set one or more settings at once from keyword arguments.
         The allowed settings and their treatments are determined from

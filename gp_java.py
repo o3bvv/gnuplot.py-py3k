@@ -120,7 +120,7 @@ class GnuplotProcess:
         command = [GnuplotOpts.gnuplot_command]
         if persist:
             if not test_persist():
-                raise ('-persist does not seem to be supported '
+                raise Exception('-persist does not seem to be supported '
                        'by your version of gnuplot!')
             command.append('-persist')
 

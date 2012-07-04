@@ -184,7 +184,7 @@ class GnuplotProcess:
             persist = GnuplotOpts.prefer_persist
         if persist:
             if not test_persist():
-                raise ('-persist does not seem to be supported '
+                raise Exception('-persist does not seem to be supported '
                        'by your version of gnuplot!')
             self.gnuplot = popen('%s -persist' % GnuplotOpts.gnuplot_command,
                                  'w')
