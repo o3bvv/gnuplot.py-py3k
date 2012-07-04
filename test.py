@@ -278,7 +278,7 @@ def main():
         m = (numpy.sin(xm) + 0.1*xm) - ym**2
         wait('a function of two variables from a GridData file')
         g('set parametric')
-        g('set data style lines')
+        g('set style data lines')
         g('set hidden')
         g('set contour base')
         g.xlabel('x')

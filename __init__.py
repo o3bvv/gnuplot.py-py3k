@@ -137,7 +137,7 @@ Restrictions:
     commands to gnuplot manually::
 
         g = Gnuplot.Gnuplot()
-        g('set data style linespoints')
+        g('set style data linespoints')
         g('set pointsize 5')
 
  -  There is no provision for missing data points in array data (which
