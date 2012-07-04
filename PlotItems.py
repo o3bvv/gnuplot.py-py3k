@@ -306,9 +306,9 @@ class _FileItem(PlotItem):
     def set_option_colonsep(self, name, value):
         if value is None:
             self.clear_option(name)
-        elif type(value) in [str, types.IntType]:
+        elif type(value) in [str, int]:
             self._options[name] = (value, '%s %s' % (name, value,))
-        elif type(value) is types.TupleType:
+        elif type(value) is tuple:
             subopts = []
             for subopt in value:
                 if subopt is None:
@@ -561,7 +561,7 @@ def Data(*data, **keyw):
     if 'cols' in keyw:
         cols = keyw['cols']
         del keyw['cols']
-        if isinstance(cols, types.IntType):
+        if isinstance(cols, int):
             cols = (cols,)
         data = numpy.take(data, cols, -1)
 

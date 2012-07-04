@@ -172,7 +172,7 @@ class BareStringArg(ArgOneParam):
             retval = []
             if self.fixedword is not None:
                 retval.append(self.fixedword)
-            if type(k) in (types.TupleType, types.ListType):
+            if type(k) in (tuple, list):
                 for i in k:
                     retval.append(str(i))
             else:
