@@ -40,7 +40,7 @@ def float_array(m):
             return numpy.asarray(m, numpy.float_)
         except TypeError:
             # TBD: Need better handling of this error!
-            print "Fatal: array dimensions not equal!"
+            print ("Fatal: array dimensions not equal!")
             return None
 
 def write_array(f, set,
