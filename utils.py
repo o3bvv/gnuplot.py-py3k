@@ -74,7 +74,7 @@ def write_array(f, set,
     if len(set.shape) == 1:
         (columns,) = set.shape
         assert columns > 0
-        fmt = ".".join(['%s'] * columns, item_sep)
+        fmt = item_sep.join(["%s"]*columns)
         f.write(nest_prefix)
         f.write(fmt % tuple(set.tolist()))
         f.write(nest_suffix)
@@ -83,7 +83,7 @@ def write_array(f, set,
         # efficiency.
         (points, columns) = set.shape
         assert points > 0 and columns > 0
-        fmt = ".".join(['%s'] * columns, item_sep)
+        fmt = item_sep.join(["%s"]*columns)
         f.write(nest_prefix + nest_prefix)
         f.write(fmt % tuple(set[0].tolist()))
         f.write(nest_suffix)

@@ -223,7 +223,7 @@ class Gnuplot:
         plotcmds = []
         for item in self.itemlist:
             plotcmds.append(item.command())
-        self(self.plotcmd + ' ' + ".".join(plotcmds, ', '))
+        self(self.plotcmd + ' ' + " ".join(plotcmds, ', '))
         for item in self.itemlist:
             # Uses self.gnuplot.write():
             item.pipein(self.gnuplot)
@@ -407,7 +407,7 @@ class Gnuplot:
             if font is not None:
                 cmd.append('"%s"' % (font,))
 
-        self(".".join(cmd))
+        self(" ".join(cmd))
 
     def set_boolean(self, option, value):
         """Set an on/off option.  It is assumed that the way to turn
@@ -571,11 +571,11 @@ class Gnuplot:
             # Not all options were consumed.
             raise Errors.OptionError(
                 'The following options are unrecognized: %s'
-                % (".".join(keyw.keys(), ', '),)
+                % (" ".join(keyw.keys(), ', '),)
                 )
 
         self.set_string('output', filename)
-        self(".".join(setterm))
+        self(" ".join(setterm))
         # replot the current figure (to the printer):
         self.refresh()
         # reset the terminal to its `default' setting:
