@@ -317,7 +317,7 @@ class _FileItem(PlotItem):
                     subopts.append(str(subopt))
             self._options[name] = (
                 value,
-                '%s %s' % (name, " ".join(subopts, ':'),),
+                '%s %s' % (name, ":".join(subopts),),
                 )
         else:
             raise Errors.OptionError('%s=%s' % (name, value,))
