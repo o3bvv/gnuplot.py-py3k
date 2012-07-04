@@ -136,7 +136,7 @@ class StringArg(ArgOneParam):
 
         if k is None:
             return None
-        elif type(k) is not types.StringType:
+        elif type(k) is not str:
             raise Errors.OptionError(
                 'Option %s must be a string' % (self.argname,))
         else:

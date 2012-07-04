@@ -247,7 +247,7 @@ class Gnuplot:
         for item in items:
             if isinstance(item, PlotItems.PlotItem):
                 self.itemlist.append(item)
-            elif type(item) is types.StringType:
+            elif type(item) is str:
                 self.itemlist.append(PlotItems.Func(item))
             else:
                 # assume data is an array:
@@ -429,7 +429,7 @@ class Gnuplot:
 
         if value is None:
             self('set %s [*:*]' % (option,))
-        elif type(value) is types.StringType:
+        elif type(value) is str:
             self('set %s %s' % (option, value,))
         else:
             # Must be a tuple:

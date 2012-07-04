@@ -152,7 +152,7 @@ class PlotItem:
 
         if value is None:
             self._options[option] = (value, default)
-        elif type(value) is types.StringType:
+        elif type(value) is str:
             self._options[option] = (value, fmt % value)
         else:
             Errors.OptionError('%s=%s' % (option, value,))
@@ -306,7 +306,7 @@ class _FileItem(PlotItem):
     def set_option_colonsep(self, name, value):
         if value is None:
             self.clear_option(name)
-        elif type(value) in [types.StringType, types.IntType]:
+        elif type(value) in [str, types.IntType]:
             self._options[name] = (value, '%s %s' % (name, value,))
         elif type(value) is types.TupleType:
             subopts = []
@@ -495,7 +495,7 @@ def File(filename, **keyw):
 
     """
 
-    if type(filename) is not types.StringType:
+    if type(filename) is not str:
         raise Errors.OptionError(
             'Argument (%s) must be a filename' % (filename,)
             )
