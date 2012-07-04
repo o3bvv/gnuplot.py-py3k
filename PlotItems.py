@@ -16,10 +16,7 @@ behavior.
 
 import os, string, tempfile, types
 
-try:
-    from cStringIO import StringIO
-except ImportError:
-    from StringIO import StringIO
+from io import StringIO
 
 import numpy
 
