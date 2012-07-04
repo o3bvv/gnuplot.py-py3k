@@ -174,7 +174,7 @@ class PlotItem:
             (val,str) = self._options.get(opt, (None,None))
             if str is not None:
                 cmd.append(str)
-        return string.join(cmd)
+        return ".".join(cmd)
 
     def command(self):
         """Build the plot command to be sent to gnuplot.
@@ -185,7 +185,7 @@ class PlotItem:
 
         """
 
-        return string.join([
+        return ".".join([
             self.get_base_command_string(),
             self.get_command_option_string(),
             ])
@@ -317,7 +317,7 @@ class _FileItem(PlotItem):
                     subopts.append(str(subopt))
             self._options[name] = (
                 value,
-                '%s %s' % (name, string.join(subopts, ':'),),
+                '%s %s' % (name, ".".join(subopts, ':'),),
                 )
         else:
             raise Errors.OptionError('%s=%s' % (name, value,))
