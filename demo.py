@@ -31,7 +31,7 @@ def demo():
     # Plot a list of (x, y) pairs (tuples or a numpy array would
     # also be OK):
     g.plot([[0,1.1], [1,5.8], [2,3.3], [3,4.2]])
-    raw_input('Please press return to continue...\n')
+    input('Please press return to continue...\n')
 
     g.reset()
     # Plot one dataset from an array and one via a gnuplot function;
@@ -50,7 +50,7 @@ def demo():
     g.ylabel('x squared')
     # Plot a function alongside the Data PlotItem defined above:
     g.plot(Gnuplot.Func('x**2', title='calculated by gnuplot'), d)
-    raw_input('Please press return to continue...\n')
+    input('Please press return to continue...\n')
 
     # Save what we just plotted as a color postscript file.
 
@@ -61,7 +61,7 @@ def demo():
     g.ylabel('x^2') # take advantage of enhanced postscript mode
     g.hardcopy('gp_test.ps', enhanced=1, color=1)
     print ('\n******** Saved plot to postscript file "gp_test.ps" ********\n')
-    raw_input('Please press return to continue...\n')
+    input('Please press return to continue...\n')
 
     g.reset()
     # Demonstrate a 3-d plot:
@@ -89,7 +89,7 @@ def demo():
     # binary data.  Change this to `binary=1' (or omit the binary
     # option) to get the advantage of binary format.
     g.splot(Gnuplot.GridData(m,x,y, binary=0))
-    raw_input('Please press return to continue...\n')
+    input('Please press return to continue...\n')
 
     # plot another function, but letting GridFunc tabulate its values
     # automatically.  f could also be a lambda or a global function:
@@ -97,7 +97,7 @@ def demo():
         return 1.0 / (1 + 0.01 * x**2 + 0.5 * y**2)
 
     g.splot(Gnuplot.funcutils.compute_GridData(x,y, f, binary=0))
-    raw_input('Please press return to continue...\n')
+    input('Please press return to continue...\n')
 
     # Explicit delete shouldn't be necessary, but if you are having
     # trouble with temporary files being left behind, try uncommenting
