@@ -142,7 +142,7 @@ _enumdeclarations = {
 }
 
 
-"""Suite odds and ends: Things that should be in some standard suite, but aren’t
+"""Suite odds and ends: Things that should be in some standard suite, but aren√ït
 Level 1, version 1
 
 Generated from Alpha:Desktop Folder:gnuplot.1:gnuplot 3.7.1a
@@ -385,7 +385,7 @@ class Standard_Suite:
     }
 
     def set(self, _object, _attributes={}, **_arguments):
-        """set: Set an object’s data
+        """set: Set an object√ïs data
         Required argument: the object to change
         Keyword argument to: the new value
         Keyword argument _attributes: AppleEvent attribute dictionary
@@ -539,7 +539,7 @@ _enumdeclarations = {
     'savo' : _Enum_savo,
 }
 
-"""Suite Miscellaneous Events: Useful events that aren’t in any other suite
+"""Suite Miscellaneous Events: Useful events that aren√ït in any other suite
 Level 1, version 1
 
 Generated from Alpha:Desktop Folder:gnuplot.1:gnuplot 3.7.1a
