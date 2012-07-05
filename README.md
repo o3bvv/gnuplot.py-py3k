@@ -9,7 +9,7 @@ As you can read on the official page, Gnuplot.py depends on [NumPy]. Make sure y
 ### Few words about NumPy installation
 If you are installing NumPy from sources, then you should install 
 
-* "[ATLAS] + [LAPACK], or [MKL], or ACML" - as written on the official site;
+* "[ATLAS] + [LAPACK], or [MKL], or [ACML]" - as written on the official site;
 * [nose] - for running tests.
 
 To install nose from sources it's better to have fresh version of [distribute].
